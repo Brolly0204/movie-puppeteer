@@ -1,0 +1,24 @@
+{
+  "name": "movie-trailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lwenli1224/movie-trailer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lwenli1224/movie-trailer/issues"
+  },
+  "homepage": "https://github.com/Lwenli1224/movie-trailer#readme",
+  "dependencies": {
+    "koa": "^2.5.1"
+  }
+}
