@@ -18,9 +18,10 @@ const sleep = time => new Promise(resolve => {
 
   await sleep(3000)
 
+  // 等待class为more的加载更多按钮出现
   await page.waitForSelector('.more')
 
-  for(let i = 0; i < 1; i++) {
+  for (let i = 0; i < 2; i++) { // 点击一次按钮加载更多
     await sleep(3000)
     await page.click('.more')
   }
