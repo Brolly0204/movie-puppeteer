@@ -51,6 +51,13 @@ const sleep = time => new Promise(resolve => {
     return links
   })
   await browser.close()
+
+  // 监听主进程发送的消息
+  process.on('message', mess => {
+    console.log(mess);
+    process.exit(0)
+  })
+  // 向主进程发送消息
   process.send({result})
-  process.exit(0)
+
 })();
