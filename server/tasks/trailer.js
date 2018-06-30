@@ -3,7 +3,7 @@ const { resolve } = require('path')
 
 ;(async () => {
   // 要在子进程中运行的模块
-  const scriptPath = resolve(__dirname, '../crawler/trailer-list')
+  const scriptPath = resolve(__dirname, '../crawler/video')
   const child = cp.fork(scriptPath, [])
   let invoked = false
 
@@ -22,7 +22,7 @@ const { resolve } = require('path')
 
   // 监听子进程发送的消息
   child.on('message', data => {
-    console.log(data);
+    console.log('result', data)
     // 向子进程发送消息
     child.send('child: 我收到了')
   })
